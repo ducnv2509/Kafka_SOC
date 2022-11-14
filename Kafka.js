@@ -8,6 +8,7 @@ import Ticket from './models/Ticket.js';
 const { exist } = pkg;
 dotenv.config();
 
+myLogger.info('test %o', process.env.SOC_KAFKA)
 
 const kafka = new Kafka({
     brokers: [process.env.SOC_KAFKA]
