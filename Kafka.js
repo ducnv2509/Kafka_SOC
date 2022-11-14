@@ -13,16 +13,6 @@ const kafka = new Kafka({
     brokers: [process.env.SOC_KAFKA]
 })
 
-// const kafka = new Kafka({
-//     brokers:
-//         ['10.14.132.44:9092']
-// })
-
-// let client = new kafka.client("10.14.132.44:9092")
-// const consumer = kafka.consumer(
-//     { groupId: 'consumer-group', rackId: '1' });
-// const topic = 'helion';
-
 const consumer = kafka.consumer({ groupId: 'consumer-group' })
 
 await consumer.connect()
