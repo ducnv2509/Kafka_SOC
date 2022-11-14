@@ -10,7 +10,7 @@ dotenv.config();
 
 
 const kafka = new Kafka({
-    brokers: ['10.14.132.44:9092']
+    brokers: [process.env.SOC_KAFKA]
 })
 
 // const kafka = new Kafka({
